@@ -1,6 +1,7 @@
 # JS-documentation
+
 ## Introduction:
-* initially created to “make web pages alive”.
+* Initially created to “make web pages alive”.
 * Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.
 * In this aspect, JavaScript is very different from another language called Java.
 * can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine.
@@ -19,6 +20,7 @@
 * Support by all major browsers and enabled by default.
 
 ## JS Fundamentals:
+
 ### Insert JS in HTML documents
 Generally, there are two ways of inserting JS into Webpage
 1. In HTML document itself.
@@ -33,3 +35,65 @@ Generally, there are two ways of inserting JS into Webpage
 ```
 * When there are less code of JS use first way
 * When the logic is complex then apply second way
+
+### code structure
+
+* **Statements** - syntax constructs and commands that perform actions
+* Automatic semicolon insertion
+* In most cases, a newline implies a semicolon. But “in most cases” does not mean “always”!
+* Example : 
+```javascript
+alert("There will be an error")
+[1, 2].forEach(alert)
+```
+* **comments** - // for one line and /*...*/ for multiline
+* nested comments is not allowed
+
+* 'use strict' used at top for making the code in modern way
+* In between the script will not work
+* morden JS includes class and module if there is use of this properties not need to required write 'use script' at top.
+
+### Variables:
+* Declaretion:
+```javascript
+let message;
+```
+* assignment:
+```javascript
+message = 'hello';
+```
+* Declaretion and assignment:
+```javascript
+let message = 'hello';
+```
+* Var is older version of let keyword used for same purpose
+* Variable is the box name and value is the thing inside that box
+* Reassignment is possible
+* Declaring twice triggers an error
+* alphanumeric, $ and _ use in variable naming, can not use digit first
+* Non-Latin letters are allowed, but not recommended
+* Case matters
+* Reserved names cannot taken
+* In old version, assignment can be done without let or var
+```javascript
+// note: no "use strict" in this example
+
+num = 5; // the variable "num" is created if it didn't exist
+
+alert(num); // 5
+```
+### Constants
+* To declare a constant (unchanging) variable, use const instead of let
+```javascript
+const myBirthday = '18.04.1982';
+```
+* When a programmer is sure that a variable will never change, they can declare it with const to guarantee and clearly communicate that fact to everyone.
+* constant veriable name should be capital when direct assignment is there.
+```javascript
+const COLOR_RED = "#F00";
+```
+* When there is constant which assign with some veriable then constant veriable name should be normal (camelcase).
+```javascript
+let time = 3*60;
+const pageLoadTime = time;
+```
