@@ -181,6 +181,7 @@ A. alert:
      ```javascript
         alert("Hello");
      ```
+
 B. prompt:
     ```javascript
        result = prompt('title', default);
