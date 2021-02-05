@@ -199,3 +199,23 @@ const pageLoadTime = time;
 All these methods are modal: they pause script execution and don’t allow the visitor to interact with the rest of the page until the window has been dismissed.
 
 ### Type Conversions
+
+1. String Conversion
+```javascript
+let value = true;
+alert(typeof value); // boolean
+value = String(value); // now value is a string "true"
+alert(typeof value); // string
+```
+2. Numeric Conversion
+* happens in mathematical functions and expressions automatically.
+```javascript
+alert( "6" / "2" ); // 3, strings are converted to numbers
+```
+```javascript
+let str = "123";
+alert(typeof str); // string
+let num = Number(str); // becomes a number 123
+alert(typeof num); // number
+```
+* If the string is not a valid number, the result of such a conversion is NaN.
