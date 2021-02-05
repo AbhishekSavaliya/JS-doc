@@ -176,22 +176,22 @@ const pageLoadTime = time;
 
 ### Interaction: alert, prompt, confirm
 
-A. alert:
+1. alert:
     * shows a message and waits for the user to press “OK”
-     ```javascript
+    * ```javascript
         alert("Hello");
      ```
 
-B. prompt:
-    ```javascript
+2. prompt:
+    * ```javascript
        result = prompt('title', default);
     ```
     * default : An optional second parameter, the initial value for the input field
     * shows a message asking the user to input text. It returns the text or, if Cancel button or Esc is clicked, null
     * In IE: always supply a default, Internet Explorer will insert the text "undefined" into the prompt.
 
-C. confirm
-     ```javascript
+3. confirm
+    * ```javascript
        result = confirm(question);
     ```
     * shows a modal window with a question and two buttons: OK and Cancel.
