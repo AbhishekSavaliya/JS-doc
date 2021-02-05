@@ -252,4 +252,53 @@ alert( Boolean("") ); // false
 #### String concatenation with binary +
 ```javascript
 let s = "my" + "string";
+alert( '1' + 2 ); // "12"
+alert( 2 + '1' ); // "21"
+alert(2 + 2 + '1' ); // "41" and not "221"
+alert('1' + 2 + 2); // "122" and not "14"
+```
+#### Numeric conversion, unary +
+```javascript
+alert( 6 - '2' ); // 4, converts '2' to a number
+alert( '6' / '2' ); // 3, converts both operands to numbers
+let x = 1;
+alert( +x ); // 1
+
+let y = -2;
+alert( +y ); // -2
+
+// Converts non-numbers
+alert( +true ); // 1
+alert( +"" );   // 0
+```
+* The binary plus would add them as strings:
+```javascript
+let apples = "2";
+let oranges = "3";
+
+alert( apples + oranges ); // "23", the binary plus concatenates strings
+```
+```javascript
+let apples = "2";
+let oranges = "3";
+
+// both values converted to numbers before the binary plus
+alert( +apples + +oranges ); // 5
+
+// the longer variant
+// alert( Number(apples) + Number(oranges) ); // 5
+```
+#### Operator precedence
+() > > +(unary) > -(unary) > ** > / > * > + > - > =
+
+#### Assignment operator
+* All operators in JavaScript return a value
+```javascript
+let a = 1;
+let b = 2;
+
+let c = 3 - (a = b + 1);
+
+alert( a ); // 3
+alert( c ); // 0
 ```
