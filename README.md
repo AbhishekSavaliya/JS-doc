@@ -177,25 +177,25 @@ const pageLoadTime = time;
 ### Interaction: alert, prompt, confirm
 
 1. alert:
-    * shows a message and waits for the user to press “OK”
-    * ```javascript
-        alert("Hello");
-     ```
+* shows a message and waits for the user to press “OK”
+```javascript
+ alert("Hello");
+ ```
 
 2. prompt:
-    * ```javascript
+```javascript
        result = prompt('title', default);
-    ```
-    * default : An optional second parameter, the initial value for the input field
-    * shows a message asking the user to input text. It returns the text or, if Cancel button or Esc is clicked, null
-    * In IE: always supply a default, Internet Explorer will insert the text "undefined" into the prompt.
+```
+* default : An optional second parameter, the initial value for the input field
+* shows a message asking the user to input text. It returns the text or, if Cancel button or Esc is clicked, null
+* In IE: always supply a default, Internet Explorer will insert the text "undefined" into the prompt.
 
 3. confirm
-    * ```javascript
+```javascript
        result = confirm(question);
-    ```
-    * shows a modal window with a question and two buttons: OK and Cancel.
+```
+* shows a modal window with a question and two buttons: OK and Cancel.
 
-* All these methods are modal: they pause script execution and don’t allow the visitor to interact with the rest of the page until the window has been dismissed.
+All these methods are modal: they pause script execution and don’t allow the visitor to interact with the rest of the page until the window has been dismissed.
 
 ### Type Conversions
