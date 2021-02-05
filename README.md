@@ -302,3 +302,14 @@ let c = 3 - (a = b + 1);
 alert( a ); // 3
 alert( c ); // 0
 ```
+* Chaining assignments is posible, execute right to left
+* ++,-- operator
+* all operator return value: ++x return x+1 where x++ returns x
+```javascript
+let counter = 1;
+alert( 2 * ++counter ); // 4
+```
+```javascript
+let counter = 1;
+alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
+```
