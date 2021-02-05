@@ -14,9 +14,9 @@
 3. the machine code runs, pretty fast.
 
 ### Why JS is unique?
-*Full integration with HTML/CSS.
-*Simple things are done simply.
-*Support by all major browsers and enabled by default.
+* Full integration with HTML/CSS.
+* Simple things are done simply.
+* Support by all major browsers and enabled by default.
 
 ## JS Fundamentals:
 ### Insert JS in HTML documents
@@ -31,3 +31,5 @@ Generally, there are two ways of inserting JS into Webpage
 ```HTML
 <script src="/path/to/script.js"></script>
 ```
+* When there are less code of JS use first way
+* When the logic is complex then apply second way
