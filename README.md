@@ -147,7 +147,29 @@ const pageLoadTime = time;
        let x = undefined;
     ```
     * one uses null to assign an “empty” or “unknown” value to a variable, while undefined is reserved as a default initial value for unassigned things
-7. Objects and Symbols
+7. Objects
     * used to store collections of data and more complex entities.
-    
-  
+     ```javascript
+        let x = {name:'Abhi',age:21};
+     ```
+8. Symbols
+    * used to create unique identifiers for objects.
+
+* typeof oprator
+
+* returns the type of the argument
+* It supports two forms of syntax:
+    A. As an operator: typeof x.
+    B. As a function: typeof(x).
+```javascript
+typeof undefined // "undefined"
+typeof 0 // "number"
+typeof 10n // "bigint"
+typeof true // "boolean"
+typeof "foo" // "string"
+typeof Symbol("id") // "symbol"
+typeof Math // "object"  
+typeof null // "object" 
+typeof alert // "function" 
+ ```
+* The result of typeof null is "object". That’s an officially recognized error in typeof behavior
