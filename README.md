@@ -219,3 +219,37 @@ let num = Number(str); // becomes a number 123
 alert(typeof num); // number
 ```
 * If the string is not a valid number, the result of such a conversion is NaN.
+
+values | Becames
+------ | -------
+undefined | NaN
+null | 0
+true and false | 0 and 1
+string | Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. An error gives NaN.
+
+3. Boolean Conversion
+* happens in logical operations
+* Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.
+* Other values become true.
+```javascript
+alert( Boolean(1) ); // true
+alert( Boolean(0) ); // false
+
+alert( Boolean("hello") ); // true
+alert( Boolean("") ); // false
+```
+* string '0' is true
+* undefined is NaN as a number, not 0.
+* "0" and space-only strings like " " are true as a boolean.
+
+### Basic operators
+* operand – is what operators are applied to
+* unary operator: oprand is one EX: nagation ==> x = -x
+* binary operator: oprand is two EX: substrection ==> x = 5-5
+* above to example is different opretor but shares same key
+* +, -, *, /, %, ** are operator
+
+#### String concatenation with binary +
+```javascript
+let s = "my" + "string";
+```
