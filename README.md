@@ -157,19 +157,19 @@ const pageLoadTime = time;
 
 * typeof oprator
 
-* returns the type of the argument
-* It supports two forms of syntax:
-    A. As an operator: typeof x.
-    B. As a function: typeof(x).
-```javascript
-typeof undefined // "undefined"
-typeof 0 // "number"
-typeof 10n // "bigint"
-typeof true // "boolean"
-typeof "foo" // "string"
-typeof Symbol("id") // "symbol"
-typeof Math // "object"  
-typeof null // "object" 
-typeof alert // "function" 
- ```
-* The result of typeof null is "object". That’s an officially recognized error in typeof behavior
+    * returns the type of the argument
+    * It supports two forms of syntax:
+        A. As an operator: typeof x.
+        B. As a function: typeof(x).
+    ```javascript
+    typeof undefined // "undefined"
+    typeof 0 // "number"
+    typeof 10n // "bigint"
+    typeof true // "boolean"
+    typeof "foo" // "string"
+    typeof Symbol("id") // "symbol"
+    typeof Math // "object"  
+    typeof null // "object" 
+    typeof alert // "function" 
+     ```
+    * The result of typeof null is "object". That’s an officially recognized error in typeof behavior
