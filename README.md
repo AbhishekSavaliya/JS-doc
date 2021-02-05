@@ -97,3 +97,57 @@ const COLOR_RED = "#F00";
 let time = 3*60;
 const pageLoadTime = time;
 ```
+### Data types
+* eight basic data types
+* Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, meaning that there exist data types, but variables are not bound to any of them.
+1. Number
+    * represents both integer and floating points
+    * Infinity, -Infinity and NaN are type of number
+    * NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+    ```javascript
+       alert( "not a number" / 2 );
+    ```
+2. BigInt
+    * sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+    * value is created by appending n to the end of an integer
+    ```javascript
+       const bigInt = 1234567890123456789012345678901234567890n;
+    ```
+3. String
+    * there are 3 types of quotes.
+        Double quotes: "Hello".
+        Single quotes: 'Hello'.
+        Backticks: `Hello`.
+    * Double and single quotes are “simple” quotes.
+    * Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}, for example:
+    ```javascript
+       let name = "John";
+       // embed a variable
+       alert( `Hello, ${name}!` ); // Hello, John!
+       // embed an expression
+       alert( `the result is ${1 + 2}` ); // the result is 3
+    ```
+    * The expression inside ${…} is evaluated and the result becomes a part of the string. veriable or expression
+4. Boolean
+    * Boolean values also come as a result of comparisons:
+    ```javascript
+       let isGreater = 4 > 1;
+       alert( isGreater ); // true (the comparison result is "yes")
+    ```
+5. Null
+    * null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+    * represents “nothing”, “empty” or “value unknown”.
+    ```javascript
+       let age = null;
+    ```
+6. undefind
+    * veriable declared but not assigned.
+    ```javascript
+       let age;
+       let x = undefined;
+    ```
+    * one uses null to assign an “empty” or “unknown” value to a variable, while undefined is reserved as a default initial value for unassigned things
+7. Objects and Symbols
+    * used to store collections of data and more complex entities.
+    
+  
