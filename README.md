@@ -403,3 +403,23 @@ alert( undefined == 0 ); // false (3)
 * Comparisons (1) and (2) return false because undefined gets converted to NaN and NaN is a special numeric value which returns false for all comparisons
 * The equality check (3) returns false because undefined only equals null, undefined, and no other value.
 
+### If
+#### Boolean conversion
+* A number 0, an empty string "", null, undefined, and NaN all become false. Because of that they are called “falsy” values and other is true.
+
+#### ? oprator
+* ? operator has a low precedence, so it executes after the comparison >.
+```javascript
+let accessAllowed = (age > 18) ? true : false;
+```
+* Multiple ‘?’:
+```javascript
+let age = prompt('age?', 18);
+
+let message = (age < 3) ? 'Hi, baby!' :
+  (age < 18) ? 'Hello!' :
+  (age < 100) ? 'Greetings!' :
+  'What an unusual age!';
+
+alert( message );
+```
