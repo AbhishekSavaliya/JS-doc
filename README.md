@@ -178,6 +178,7 @@ const pageLoadTime = time;
 
 1. alert:
 * shows a message and waits for the user to press “OK”
+* The call to alert does not return a value. Or, in other words, it returns undefined
 ```javascript
  alert("Hello");
  ```
@@ -424,4 +425,25 @@ let message = (age < 3) ? 'Hi, baby!' :
 alert( message );
 ```
 ### Logical operators
-* ||, 
+
+#### OR ||
+* returns the first truthy value or the last one if no truthy value is found.
+* A value is returned in its original form, without the conversion.   
+* until the first truthy value is reached, and then the value is returned immediately, without even touching the other argument
+```javascript
+true || alert("not printed");
+false || alert("printed");
+```
+* people use this feature to execute commands only if the condition on the left part is falsy.
+
+#### AND &&
+* AND returns the first falsy value or the last value if none were found.
+* Precedence of AND && is higher than OR ||
+
+#### ! (NOT)
+* precedence of NOT ! is the highest of all logical operators
+```javascript
+/// we can also use Boolen method
+alert( Boolean("non-empty string") ); // true
+alert( Boolean(null) ); // false
+```
