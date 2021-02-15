@@ -363,5 +363,43 @@ alert( 'Bee' > 'Be' ); // true
 ```javascript
 alert( '2' > 1 ); // true, string '2' becomes a number 2
 alert( '01' == 1 ); // true, string '01' becomes a number 1
+alert( true == 1 ); // true
+alert( false == 0 ); // true
+
+////// A funny consequence:
+let a = 0;
+alert( Boolean(a) ); // false
+
+let b = "0";
+alert( Boolean(b) ); // true
+
+alert(a == b); // true!
 ```
+#### Strict equality
+* A strict equality operator === checks the equality without type conversion.
+```javascript
+alert( 0 == false ); // true
+alert( '' == false ); // true
+alert( 0 === false ); // false, because the types are different
+alert( null === undefined ); // false
+alert( null == undefined ); // true
+```
+* For maths and other comparisons < > <= >= null/undefined are converted to numbers: null becomes 0, while undefined becomes NaN
+* Strange result: null vs 0
+```javascript
+alert( null > 0 );  // (1) false
+alert( null == 0 ); // (2) false
+alert( null >= 0 ); // (3) true
+```
+* The reason is that an equality check == and comparisons > < >= <= work differently.
+* Comparisons convert null to a number, treating it as 0. That’s why (3) null >= 0 is true and (1) null > 0 is false.
+the equality check == for undefined and null is defined such that, without any conversions, they equal each other and don’t equal anything else. That’s why (2) null == 0 is false.
+* An incomparable undefined:
+```javascript
+alert( undefined > 0 ); // false (1)
+alert( undefined < 0 ); // false (2)
+alert( undefined == 0 ); // false (3)
+```
+* Comparisons (1) and (2) return false because undefined gets converted to NaN and NaN is a special numeric value which returns false for all comparisons
+* The equality check (3) returns false because undefined only equals null, undefined, and no other value.
 
