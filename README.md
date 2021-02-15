@@ -313,3 +313,55 @@ alert( 2 * ++counter ); // 4
 let counter = 1;
 alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
 ```
+* The operators ++/-- can be used inside expressions as well. Their precedence is higher than most other arithmetical operations.
+```javascript
+let counter = 1;
+alert( 2 * ++counter ); // 4 dont use; one line one action
+```
+#### Bitwise operators
+* treat arguments as 32-bit integer numbers and work on the level of their binary representation.
+* used in cryptography
+AND ( & )
+OR ( | )
+XOR ( ^ )
+NOT ( ~ )
+LEFT SHIFT ( << )
+RIGHT SHIFT ( >> )
+ZERO-FILL RIGHT SHIFT ( >>> )
+
+#### Comma(,)
+* evaluate several expressions, dividing them with a comma ,. Each of them is evaluated but only the result of the last one is returned.
+* very low precedence < assignment op.
+```javascript
+let a = (1 + 2, 3 + 4);
+alert( a ); // 7 (the result of 3 + 4)
+```
+* use of ',' in JS:
+```javascript
+// three operations in one line
+for (a = 1, b = 3, c = a * b; a < 10; a++) {
+ ...
+}
+```
+
+### Compairisons
+* >, <, >=, <=, ==, !=
+* we can assign result of compairition
+```javascript
+let result = 5 > 4; // assign the result of the comparison
+alert( result ); // true
+```
+#### String compairisons
+*  uses the so-called “dictionary” or “lexicographical” order
+* compair with  internal encoding table JavaScript uses (Unicode)
+```javascript
+alert( 'Z' > 'A' ); // true
+alert( 'Glow' > 'Glee' ); // true
+alert( 'Bee' > 'Be' ); // true
+```
+#### Comparison of different types
+```javascript
+alert( '2' > 1 ); // true, string '2' becomes a number 2
+alert( '01' == 1 ); // true, string '01' becomes a number 1
+```
+
