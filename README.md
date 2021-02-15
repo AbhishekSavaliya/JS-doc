@@ -423,3 +423,5 @@ let message = (age < 3) ? 'Hi, baby!' :
 
 alert( message );
 ```
+### Logical operators
+* ||, 
